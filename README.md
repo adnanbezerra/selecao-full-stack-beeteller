@@ -1,59 +1,85 @@
-# Beeteller - Desenvolvedor Full Stack
+# <p align = "center"> Teste de dev full-stack da Beeteller </p>
 
-O objetivo dessa atividade é avaliar tecnicamente os candidatos que participam da nossa seleção para vaga de desenvolver Full Stack. O teste é realizado para as vagas de todos os níveis, mas para cada vaga existe critérios mais específicos. 
-Preste bastante atenção nas instruções e boa sorte! :)
+<p align="center">
+   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F6b4357_ff1a21eee4c74cd59dafe28a3695117f~mv2.jpg%2Fv1%2Ffill%2Fw_1080%2Ch_1081%2Cal_c%2F6b4357_ff1a21eee4c74cd59dafe28a3695117f~mv2.jpg&f=1&nofb=1&ipt=44956a8c45301911a3d86ad08f76efc79e5d253eaf00870a60844216be51896d&ipo=images" width="250px"/>
+</p>
 
-
-## Instruções
-
-Você deverá realizar um clone deste projeto e desenvolver todo o seu código dentro de um repositório e nós enviar o link final. Use o README do seu repositório para explicar um pouco de como foi o desafio, as decisões que você tomou e as instruções para instalar e rodar corretamente o projeto.
-
-Sinta-se livre e tente mostrar a sua capacidade nos impressionando, mas não esqueça de atingir os objetivos principais do projeto. Faça o seu melhor!
-
-## Let's code
-
-Você irá construir uma aplicação, com back-end e front-end separados, para listar cotações em tempo real (periodicamente atualizadas) de algumas moedas utilizando algumas APIs. A aplicação conta com uma tela simples de login para realizar autenticação e um dashboard onde serão mostrados as cotações.
-
-Como o desafio não é para um designer e sim para um dev, construimos um [protótipo no Figma](https://www.figma.com/file/k7SF69GbpxkgtbaPaSISow/Case?node-id=0%3A1) de como deve ficar a interface do front-end.
-
-Como estamos esperando um projeto de back-end e um de front-end, então o seu front-end precisa consumir a aplicação do back-end.
-
-As APIs que você deve consumir estão abaixo:
-
-* [API de moedas BRL/USD](https://docs.awesomeapi.com.br/api-de-moedas)
-* [API de moedas BTC/EUR](https://api.kraken.com/0/public/Ticker?pair=XBTeur) (primeiro parâmetro da chave `a`)
-* [API de moedas BTC/USD](https://api.kraken.com/0/public/Ticker?pair=XBTusd) (primeiro parâmetro da chave `a`)
-
-De preferência se você tiver domínio, esperamos ver o front-end em Angular ou React, e o backend em NodeJS ou Django. Mas fique a vontade para utilizar outros frameworks se acreditar que o seu desempenho será melhor por isso.
+<p align = "center">
+   <img src="https://img.shields.io/badge/author-adnanbezerra-4dae71?style=flat-square" />
+   <img src="https://img.shields.io/github/languages/count/adnanbezerra/selecao-full-stack-beeteller?color=4dae71&style=flat-square" />
+</p>
 
 
-### O que nós esperamos ver no seu desafio
+##  :clipboard: Descrição
 
-* Ver a utilização do framework da melhor forma possível (metodologia/estrutura).
-* Ver a utilização de dependency managers (npm, webpack, pip, yarn)
-* Rotas de APIs bem estruturadas
-* Separação adequada de responsabilidades (back-end e front-end)
-* Layout responsivo
+Este é o teste técnico para o processo seletivo de desenvolvedor web full-stack pela empresa Beeteller. Para ele, é preciso criar uma aplicação web simples, que consiste em três telas: uma de login, uma de cadastro e uma para visualizar um feed com novidades referentes ao câmbio de ativos, com informações extraídas de APIs externas, todas as telas responsivas.
 
-### O que nós ficaríamos felizes de ver em seu teste
+Para este projeto, eu irei utilizar React para o front e Node para o back. 
 
-* Testes unitários e/ou testes de integração
+### Passo-a-passo para resolução do projeto:
 
-### O que nos impressionaria
+- Primeiramente, leitura atenciosa do README do projeto e também estudo do Figma para entender o design;
+- Criação do repositório no GitHub e configurações inicials;
+- Criação do README inicial;
+- Fazer planos iniciais do front-end e do back-end;
 
-* Ver o código rodando live (Bucket estático S3, Heroku, Firebase Hosting)
+***
 
-### O que nós não gostaríamos
+## :computer: Tecnologias e Conceitos
 
-* Descobrir que não foi você quem fez seu desafio :(
-* Ver commits grandes, sem muita explicação nas mensagens em seu repositório 
-* Não conseguir rodar a sua aplicação por algum erro de compilação
+- Node.js
+- ReactJS
+- JavaScript
+- TypeScript
+- Arquitetura com camadas
+- PostgreSQL com Prisma
+- JWT
+- Testagem com Jest e Faker
+- Axios
+- Router-Dom
+- Responsividade
+- etc
 
-## O que avaliaremos de seu teste
+***
 
-* Histórico de commits do git
-* As instruções de como rodar o projeto
-* Estruturação do projeto
-* Organização, semântica, estrutura, legibilidade, manutenibilidade do seu código
-* Alcance dos objetivos propostos
-* Adaptação mobile (layout responsivo)
+## 🏁 Rodando o projeto
+
+### Back-end
+
+O back-end foi feito com [ExpressJS](https://github.com/expressjs/express), então é preciso que sua máquina tenha instaladas as versões estáveis mais recentes do [Node.js](https://nodejs.org/en/download/) e do [npm](https://www.npmjs.com/).
+
+Primeiramente, você precisa clonar todo o projeto para a sua máquina:
+
+```
+git clone https://github.com/adnanbezerra/selecao-full-stack-beeteller.git
+```
+
+Então, dentro do diretório do back-end, você deve rodar o seguinte comando para instalar as dependências necessárias:
+
+```
+npm install
+```
+
+Agora, você preisa configurar o arquivo `.env`. Você deve copiar o que estiver dentro de `.env.example`, criar um arquivo `.env`, colar as informações copiadas e preencher as variáveis necessárias para fazer a aplicação funcionar em sua máquina. Para tanto, é preciso que você tenha o [Postgres](https://www.postgresql.org/) instalado, para gerar a DATABASE_URL com as informações de sua máquina.
+
+Agora, você pode finalmente rodar o seu servidor localmente usando esse comando:
+
+```
+npm start
+```
+
+### Front-end
+
+O front-end do projeto foi inicializado com o [Vite](https://vitejs.dev/), e, portanto, roda tanto o [Node.js](https://nodejs.org/en/download/) quanto [npm](https://www.npmjs.com), tal qual ocorre no back-end. Portanto, as dependências de funcionamento são as mesmas.
+
+Agora, navegue até o diretório do back-end e rode o seguinte comando para instalar as dependencias>
+
+```
+npm install
+```
+
+Finalizado o processo, é só inicializar o servidor com:
+
+```
+npm run dev
+```
