@@ -1,7 +1,9 @@
 import { IUserRepository } from '../interfaces/UserRepository';
-import { NewUserType } from '../types/UserTypes';
-import { conflictError } from '../utils/errorUtils';
+import { NewUserType, SignInInfo } from '../types/UserTypes';
+import { conflictError, unauthorizedError } from '../utils/errorUtils';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { EXPIRATION, SECRET_KEY } from '../utils/jwt';
 
 class UserService {
   async createNewUser(
@@ -18,6 +20,24 @@ class UserService {
     };
 
     await userRepository.createNewUser(payload);
+  }
+
+  async signIn(signInInfo: SignInInfo, userRepository: IUserRepository) {
+    const user = await userRepository.getUserFromDatabase(signInInfo);
+    const verify = bcrypt.compareSync(signInInfo.password, user.password);
+
+    if (!verify) throw unauthorizedError('Wrong email or password!');
+
+    const payload = {
+      id: user.id,
+      email: user.email,
+    };
+
+    const token = jwt.sign(payload, SECRET_KEY, {
+      expiresIn: EXPIRATION,
+    });
+
+    return token;
   }
 }
 
