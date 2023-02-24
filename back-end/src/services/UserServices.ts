@@ -24,6 +24,8 @@ class UserService {
 
   async signIn(signInInfo: SignInInfo, userRepository: IUserRepository) {
     const user = await userRepository.getUserFromDatabase(signInInfo);
+    if (!user) throw unauthorizedError('Wrong email or password!');
+
     const verify = bcrypt.compareSync(signInInfo.password, user.password);
 
     if (!verify) throw unauthorizedError('Wrong email or password!');
