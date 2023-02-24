@@ -4,7 +4,7 @@ import { client } from '../../src/database/prisma';
 import { createUser } from '../factories/UserFactory';
 
 beforeEach(async () => {
-  await client.$executeRaw`TRUNCATE TABLE "users" RESTART IDENTITY CASCADE`;
+  await client.$executeRaw`TRUNCATE TABLE "User" RESTART IDENTITY CASCADE`;
 });
 
 const connection = supertest(server);
