@@ -22,7 +22,7 @@ Para este projeto, eu irei utilizar React para o front e Node para o back.
 - Criação do repositório no GitHub e configurações inicials;
 - Criação do README inicial;
 - Importação do [modelo de projeto back-end](https://github.com/adnanbezerra/backend-typescript) criado por mim;
-- Fazer planos iniciais do front-end e do back-end;
+- Fazer planos iniciais do front-end e do back-end (desenho inicial pode ser visto [clicando aqui](https://i.imgur.com/RBzMKrn.jpg));
 
 ***
 
