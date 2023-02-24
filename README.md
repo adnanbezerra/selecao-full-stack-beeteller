@@ -23,6 +23,18 @@ Para este projeto, eu irei utilizar React para o front e Node para o back.
 - Criação do README inicial;
 - Importação do [modelo de projeto back-end](https://github.com/adnanbezerra/backend-typescript) criado por mim;
 - Fazer planos iniciais do front-end e do back-end (desenho inicial pode ser visto [clicando aqui](https://i.imgur.com/RBzMKrn.jpg));
+- Desenvolvimento do back-end:
+  - Iniciei pelo desenvolvimento da rota sign-up
+  - Pensando na testagem unitária que iria fazer futura, utilizei o design-patter da injeção de dependência no UserRepository, de modo a poder injetar um Repository de testes mais à frente
+  - Desenvolvi então utilizando uma modelagem mais ou menos baseada na orientação a objetos, com uma interface para o Repository e depois uma Implementation 
+  - De seguido, fiz o UserService, que primeiro valida se o e-mail cadastrado já existe. Se sim, ele lança um erro do tipo 409; senão, cadastra o usuário no banco de dados
+  - Depois criei o controller para receber as informações da query e enviar para o Service
+  - Por fim, liguei tudo no index.ts
+  - De seguido, desenvolvi a rota sign-in. Não foi preciso modificar o repository, então segui para o service:
+  - Primeiramente, testei se o e-mail inserido existe. Se sim, lança um erro 409; senão, testa a senha: caso esteja certa, prossegue; senão, lança erro 409. Por fim, ele gera um token com JWT com validade de 7 dias e envia para o controller
+  - Desenvolvi o controller, que basicamente recebe as informações da request, envia para o service, recebe o token e envia para o usuário
+  - Finalizada então a rota signin, me debrucei sobre os testes de integração:
+  - Utilizando as bibliotecas do Jest e do Supertest, eu fiz diversos testes integrados nas rotas de sign-in e sign-up, injetando informações certas, erradas, inválidas, inexistentes etc
 
 ***
 
