@@ -53,7 +53,18 @@ describe('UserRouter tests', () => {
     expect(result.body).toBeInstanceOf(Object);
   });
 
-  it('irregular post sign-in', async () => {
+  it('should reject post sign-in with unexisting email', async () => {
+    await connection.post('/sign-up').send(createUser());
+
+    const payload = {
+      email: '',
+      password: 'lelelele',
+    };
+
+    const result = await connection.post('/sign-in').send(payload);
+
+    expect(result.status).toEqual(422);
+  });
     await connection.post('/sign-up').send(createUser());
 
     const payload = {
