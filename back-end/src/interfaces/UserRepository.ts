@@ -4,5 +4,5 @@ import { NewUserType } from '../types/UserTypes';
 export interface IUserRepository {
   createNewUser(newUserInfo: NewUserType): Promise<User>;
 
-  getUserFromDatabase(newUserInfo: NewUserType): Promise<void | User>;
+  getUserFromDatabase(newUserInfo: NewUserType): Promise<User>;
 }

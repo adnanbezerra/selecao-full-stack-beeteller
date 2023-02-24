@@ -8,7 +8,7 @@ export class UserRepositoryImpl implements IUserRepository {
     return client.user.create({ data: newUserInfo });
   }
 
-  async getUserFromDatabase(newUserInfo: NewUserType): Promise<void | User> {
+  async getUserFromDatabase(newUserInfo: NewUserType): Promise<User> {
     return client.user.findFirst({ where: { email: newUserInfo.email } });
   }
 }
