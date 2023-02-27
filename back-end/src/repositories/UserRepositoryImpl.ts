@@ -3,7 +3,7 @@ import { client } from '../database/prisma';
 import { IUserRepository } from '../interfaces/UserRepository';
 import { NewUserType } from '../types/UserTypes';
 
-export class UserRepositoryImpl implements IUserRepository {
+class UserRepositoryImpl implements IUserRepository {
   async createNewUser(newUserInfo: NewUserType) {
     return client.user.create({ data: newUserInfo });
   }
