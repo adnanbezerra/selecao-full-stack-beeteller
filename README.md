@@ -87,11 +87,13 @@ npm start
 
 O front-end do projeto foi inicializado com o [Vite](https://vitejs.dev/), e, portanto, roda tanto o [Node.js](https://nodejs.org/en/download/) quanto [npm](https://www.npmjs.com), tal qual ocorre no back-end. Portanto, as dependências de funcionamento são as mesmas.
 
-Agora, navegue até o diretório do back-end e rode o seguinte comando para instalar as dependencias>
+Agora, navegue até o diretório do back-end e rode o seguinte comando para instalar as dependencias:
 
 ```
 npm install
 ```
+
+De seguido, você deve configurar o arquivo .env, que pede apenas um atributo BASE_URL conectando o seu projeto com a URL de onde virão as requisições. Caso o funcionamento seja local, o link normalmente vai ser "localhost:5000".
 
 Finalizado o processo, é só inicializar o servidor com:
 
