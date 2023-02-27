@@ -35,6 +35,8 @@ Para este projeto, eu irei utilizar React para o front e Node para o back.
   - Desenvolvi o controller, que basicamente recebe as informações da request, envia para o service, recebe o token e envia para o usuário
   - Finalizada então a rota signin, me debrucei sobre os testes de integração:
   - Utilizando as bibliotecas do Jest e do Supertest, eu fiz diversos testes integrados nas rotas de sign-in e sign-up, injetando informações certas, erradas, inválidas, inexistentes etc
+  - Finalizados os testes de integração, fiz os testes unitários, me utilizando da arquitetura que se usa de injeção de dependência para criar um repository de testagem e, com isso, testar os casos de sucesso e de erro do UserService
+- Desenvolvimento do front-end:
 
 ***
 
