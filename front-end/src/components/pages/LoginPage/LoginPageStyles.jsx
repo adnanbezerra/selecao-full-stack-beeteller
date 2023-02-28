@@ -5,10 +5,23 @@ export const Container = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
+
+  @media(min-width: 1000px) {
+    display: flex;
+  }
 `
 
 export const ImageContainer = styled.div`
   display: none;
+
+  @media(min-width: 1000px) {
+    display: flex;
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
 `
 
 export const ContentContainer = styled.div`
@@ -19,6 +32,19 @@ export const ContentContainer = styled.div`
   text-align: center;
   width: 100%;
   height: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+
+  @media(min-width: 1000px) {
+    width: 50%;
+    padding: 0 0 0 10%;
+    box-sizing: border-box;
+  }
+
+  @media(min-width: 600px) {
+    padding: 0 10%;
+    box-sizing: border-box;
+  }
 `
 
 export const PageTitle = styled.p`
@@ -71,7 +97,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 80%;
+  width: 100%;
   margin-top: 60px;
   margin-bottom: 15px;
 `

@@ -15,6 +15,13 @@ export const Container = styled.header`
   img {
     margin-right: 10px;
   }
+
+  @media(min-width: 600px) {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10%;
+    box-sizing: border-box;
+  }
 `
 
 export const TextContainer = styled.div`
