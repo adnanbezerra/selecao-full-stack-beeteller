@@ -81,3 +81,10 @@ export default function LoginPage() {
     </Container>
   )
 }
+        <Link to={'/register'} style={{ textDecoration: 'none' }}>
+          <RegisterLink>Não tem uma conta? Crie agora!</RegisterLink>
+        </Link>
+      </ContentContainer>
+    </Container>
+  )
+}
