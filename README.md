@@ -41,6 +41,7 @@ Para este projeto, eu irei utilizar React para o front e Node para o back.
   - Como é pedido pelo projeto que ele seja responsivo, eu optei por criar segundo o padrão mobile-first
   - De seguido, fiz a criação do header do projeto, o qual se repete em todas as páginas
   - Criei, então, a tela de login com base no Figma fornecido, utilizando de inputs controlados e demais boas-práticas do React. Primeiro na forma mobile e depois utilizando da responsividade para as demais telas
+  - De seguido, eu criei a tela de cadastro no aplicativo e também desenvolvi a sua responsividade
 
 ***
 
@@ -97,7 +98,7 @@ Agora, navegue até o diretório do back-end e rode o seguinte comando para inst
 npm install
 ```
 
-De seguido, você deve configurar o arquivo .env, que pede apenas um atributo BASE_URL conectando o seu projeto com a URL de onde virão as requisições. Caso o funcionamento seja local, o link normalmente vai ser "localhost:5000".
+De seguido, você deve configurar o arquivo .env, que pede apenas um atributo VITE_BASE_URL conectando o seu projeto com a URL de onde virão as requisições. Caso o funcionamento seja local, o link normalmente vai ser "localhost:5000".
 
 Finalizado o processo, é só inicializar o servidor com:
 
