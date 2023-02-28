@@ -37,6 +37,8 @@ Para este projeto, eu irei utilizar React para o front e Node para o back.
   - Utilizando as bibliotecas do Jest e do Supertest, eu fiz diversos testes integrados nas rotas de sign-in e sign-up, injetando informações certas, erradas, inválidas, inexistentes etc
   - Finalizados os testes de integração, fiz os testes unitários, me utilizando da arquitetura que se usa de injeção de dependência para criar um repository de testagem e, com isso, testar os casos de sucesso e de erro do UserService
 - Desenvolvimento do front-end:
+  - De início, eu fiz toda a configuração inicial de um projeto React, tais como a organização da fonte, da estrutura das pastas, do reset style, instalação das libs etc
+  - De seguido, fiz a criação do header do projeto, o qual se repete em todas as páginas
 
 ***
 
