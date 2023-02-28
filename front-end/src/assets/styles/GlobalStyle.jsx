@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
    License: none (public domain)
 */
 html, body, #root {
+	font-family: 'Roboto', sans-serif;
 	width: 100%;
 	height: 100%;
 	margin: 0;
