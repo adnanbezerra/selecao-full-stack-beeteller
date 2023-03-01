@@ -1,4 +1,4 @@
-import { Container, CotationContainer, DolarTurismo, IconContainer, RS, Value, ValueContainer } from "./ContationCardStyle";
+import { Container, CotationContainer, DolarTurismo, IconContainer, RS, Value, ValueContainer } from "./CotationCardStyle";
 import { FiDollarSign } from 'react-icons/fi';
 import { BiBitcoin } from 'react-icons/bi';
 
