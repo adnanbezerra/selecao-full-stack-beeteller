@@ -1,4 +1,4 @@
-import { Container, CotationContainer, DolarTurismo, IconContainer, RS, Value, ValueContainer } from "./CotationCardStyle";
+import { Container, QuotationContainer, DolarTurismo, IconContainer, RS, Value, ValueContainer } from "./QuotationCardStyle";
 import { FiDollarSign } from 'react-icons/fi';
 import { BiBitcoin } from 'react-icons/bi';
 
@@ -13,7 +13,7 @@ export default function CotationCard({ mainCoin, secondCoin, value }) {
 
   return (
     <Container>
-      <CotationContainer>
+      <QuotationContainer>
         <p>{mainCoin} / {secondCoin}</p>
 
         <ValueContainer>
@@ -24,7 +24,7 @@ export default function CotationCard({ mainCoin, secondCoin, value }) {
         <DolarTurismo>
           {mainCoin === 'BRL' ? 'Dolar turismo' : <></>}
         </DolarTurismo>
-      </CotationContainer>
+      </QuotationContainer>
 
       <IconContainer>
         {getIcon(mainCoin)}

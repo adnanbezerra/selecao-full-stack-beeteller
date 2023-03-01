@@ -15,10 +15,6 @@ export const Container = styled.div`
   font-size: 20px;
 
   margin-right: 32px;
-
-  @media (min-width: 600px) {
-    width: 200px;
-  }
 `
 
 export const IconContainer = styled.div`
@@ -31,7 +27,7 @@ export const IconContainer = styled.div`
   align-items: center;  
 `
 
-export const CotationContainer = styled.div`
+export const QuotationContainer = styled.div`
   display: flex;
   color: #333333;
   font-size: 18px;
