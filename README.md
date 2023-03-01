@@ -42,8 +42,8 @@ Para este projeto, eu irei utilizar React para o front e Node para o back.
   - De seguido, fiz a criação do header do projeto, o qual se repete em todas as páginas
   - Criei, então, a tela de login com base no Figma fornecido, utilizando de inputs controlados e demais boas-práticas do React. Primeiro na forma mobile e depois utilizando da responsividade para as demais telas
   - De seguido, eu criei a tela de cadastro no aplicativo e também desenvolvi a sua responsividade
-  - O próximo passo consistiu na criação dos cards que abrigarão as informações de cotações de cada moeda, com o câmbio para outras moedas. Fiz isso me utilizando de um array que conteria os requisitos e fazendo um map nele. De início não adicionei a responsividade, deixando para resolver junto com o resto da tela de feed
-  - 
+  - O próximo passo consistiu na criação dos cards que abrigarão as informações de cotações de cada moeda, com o câmbio para outras moedas. Fiz isso me utilizando de um array que conteria os requisitos e fazendo um map nele. De início não adicionei a responsividade, deixando para resolver junto com o resto da tela de feed. 
+  - Eu não fiz os componentes da página do feed me utilizando do modo mobile-first, porque apenas olhando o Figma não consegui imaginar como ficaria a versão mobile disso. Decidi primeiro desenvolver a versão web para depois ir para o mobile
 
 ***
 
