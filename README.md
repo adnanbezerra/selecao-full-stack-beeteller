@@ -87,6 +87,8 @@ npm install
 
 Agora, você preisa configurar o arquivo `.env`. Você deve copiar o que estiver dentro de `.env.example`, criar um arquivo `.env`, colar as informações copiadas e preencher as variáveis necessárias para fazer a aplicação funcionar em sua máquina. Para tanto, é preciso que você tenha o [Postgres](https://www.postgresql.org/) instalado, para gerar a DATABASE_URL com as informações de sua máquina.
 
+A variável `DATABASE_URL` segue o padrão "postgresql://<USUARIO>:<SENHA>@localhost:5432/beeteller?schema=public", enquanto que a `PORT` é, por padrão, 5000. Quanto ao `TOKEN_EXPIRES_IN`, recomendo utilizar o valor de "7d". As demais variáveis podem ser preenchidas com frases aleatórias, de acordo com a sua vontade.
+
 Agora, você pode finalmente rodar o seu servidor localmente usando esse comando:
 
 ```
@@ -103,7 +105,7 @@ Agora, navegue até o diretório do back-end e rode o seguinte comando para inst
 npm install
 ```
 
-De seguido, você deve configurar o arquivo .env, que pede apenas um atributo VITE_ BASE_URL conectando o seu projeto com a URL de onde virão as requisições. Caso o funcionamento seja local, o link normalmente vai ser "localhost:5000".
+De seguido, você deve configurar o arquivo .env, que pede apenas um atributo `VITE_BASE_URL` conectando o seu projeto com a URL de onde virão as requisições. Caso o funcionamento seja local, o link normalmente vai ser "localhost:5000".
 
 Finalizado o processo, é só inicializar o servidor com:
 
