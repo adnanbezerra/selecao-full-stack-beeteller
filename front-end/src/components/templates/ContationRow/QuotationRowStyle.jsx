@@ -16,7 +16,17 @@ export const Container = styled.div`
   color: #000;
   font-size: 20px;
 
-  justify-content: space-between
+  justify-content: space-between;
+`
+
+export const MinMaxColumn = styled.div`
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 
 export const IconContainer = styled.div`
@@ -28,6 +38,24 @@ export const IconContainer = styled.div`
   justify-content: center;
   align-items: center;  
   margin-right: 16px;
+
+  @media (max-width: 800px) {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+  }
+`
+
+export const LeftContentContainer = styled.div`
+  display: flex;
+  height: 100%; 
+  align-items: center;
+  width: 211px;
+
+  @media (max-width: 800px) {
+    width: 150px;
+    box-sizing: border-box;
+  }
 `
 
 export const InformationsColumn = styled.div`
@@ -37,11 +65,15 @@ export const InformationsColumn = styled.div`
   justify-content: center;
 `
 
-export const CoinName = styled.p`
+export const CoinName = styled.div`
   color: #333333;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 5px;
+
+  @media (max-width: 800px) {
+    width: 90px;
+  }
 `
 
 export const Date = styled.p`
@@ -50,11 +82,21 @@ export const Date = styled.p`
   font-weight: 500;
 `
 
-export const MaxMinValues = styled.p`
+export const MinValues = styled.p`
+  color: #333333;
+  font-size: 18px;
+  font-weight: 500;
+`
+
+export const MaxValues = styled.p`
   color: #333333;
   font-size: 18px;
   font-weight: 500;
   margin-right: 145px;
+
+  @media (max-width: 801px) {
+    margin: 0;
+  }
 `
 
 export const Variation = styled.div`

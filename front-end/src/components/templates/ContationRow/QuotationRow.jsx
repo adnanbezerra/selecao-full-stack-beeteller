@@ -1,4 +1,4 @@
-import { CoinName, Container, Date, IconContainer, InformationsColumn, MaxMinValues, Variation } from "./QuotationRowStyle";
+import { CoinName, Container, Date, IconContainer, InformationsColumn, LeftContentContainer, MaxValues, MinMaxColumn, MinValues, Variation } from "./QuotationRowStyle";
 import { FiDollarSign } from 'react-icons/fi';
 import { BiBitcoin } from 'react-icons/bi';
 import { MdEuro } from 'react-icons/md';
@@ -18,7 +18,7 @@ export default function CotationRow({ date, minimum, maximum, variation, coin })
 
   return (
     <Container>
-      <div style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
+      <LeftContentContainer>
         <IconContainer>
           {getIcon(coin)}
         </IconContainer>
@@ -31,12 +31,12 @@ export default function CotationRow({ date, minimum, maximum, variation, coin })
             {date}
           </Date>
         </InformationsColumn>
-      </div>
+      </LeftContentContainer>
 
-      <div style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
-        <MaxMinValues>{maximum}</MaxMinValues>
-        <MaxMinValues>{minimum}</MaxMinValues>
-      </div>
+      <MinMaxColumn>
+        <MaxValues>{maximum}</MaxValues>
+        <MinValues>{minimum}</MinValues>
+      </MinMaxColumn>
 
       <div style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
         <Variation isPositive={isPositive}>
