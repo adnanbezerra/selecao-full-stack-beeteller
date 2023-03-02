@@ -112,3 +112,31 @@ Finalizado o processo, é só inicializar o servidor com:
 ```
 npm run dev
 ```
+
+## :rocket: Rotas do Back-end
+
+    ```yml
+    POST /sign-up
+        - Rota para cadastrar um novo usuário
+        - headers: {}
+        - body: {
+            email: "lorem@gmail.com",
+            password: "loremipsum" (8 dígitos mínimo)
+        }
+    ```
+    
+```yml 
+POST /sign-in
+    - Rota para fazer login
+    - headers: {}
+    - body: {
+    email: "lorem@gmail.com",
+    password: "loremipsum" (8 dígitos mínimo)
+    }
+```
+
+## :rocket: Rotas do Front-end
+
+`/`: Leva, por padrão, à tela de login. Caso o usuário já esteja logado, é encaminhado para a tela do feed
+`/register`: Se refere à tela de cadastro de novo usuário. Caso o usuário já esteja logado, também é encaminhado para a tela do feed
+`/feed`: É a tela principal do app, onde se pode ver as cotações das moedas
