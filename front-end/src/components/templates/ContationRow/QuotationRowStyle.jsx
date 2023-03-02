@@ -94,7 +94,7 @@ export const MaxValues = styled.p`
   font-weight: 500;
   margin-right: 145px;
 
-  @media (max-width: 801px) {
+  @media (max-width: 800px) {
     margin: 0;
   }
 `
