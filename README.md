@@ -46,6 +46,7 @@ Para este projeto, eu irei utilizar React para o front e Node para o back.
   - Eu não fiz os componentes da página do feed me utilizando do modo mobile-first, porque apenas olhando o Figma não consegui imaginar como ficaria a versão mobile disso. Decidi primeiro desenvolver a versão web para depois ir para o mobile
   - Criei então os cards que irão conter o card maior de cotações, mas novamente sem adicionar responsividade ao componente
   - Finalmente foi possível finalizar a criação da tela principal, a Feed Page, com todas as suas dependências e queries
+  - Enfim eu adicionei a responsividade dos componentes da maneira mais simples porém funcional que eu consegui pensar sem um Figma para me assistir
 
 ***
 
